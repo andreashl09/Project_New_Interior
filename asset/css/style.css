@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: "helvatica-bold";
+    src: url("../fonts/helvetica-neue/HelveticaNeueBold.otf");
+}
+
+@font-face {
     font-family: "helvatica-italic";
     src: url("../fonts/helvetica-neue/HelveticaNeueLightItalic.otf");
 }
@@ -260,24 +265,27 @@ header article p {
     padding: 80px 135px;
 }
 .services,
-.quote-box {
+.quote-box,
+.contact-box {
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
     padding: 20px 32px 40px 32px;
 }
 
-.services h2 {
+.services-contact-headline h2 {
     text-align: center;
     font-family: alegreya-sans-medium;
     font-size: 3.6rem;
     font-weight: 100;
     margin-bottom: 20px;
+    color: white;
 }
 
-.services p {
+.services-contact-headline p {
     font-size: 1.4rem;
     text-align: center;
     margin-bottom: 60px;
+    color: white;
 }
 .service-boxes {
     display: flex;
@@ -393,6 +401,10 @@ a:hover {
 }
 /* #Section testi */
 
+.testi {
+    margin-bottom: 88px;
+}
+
 .testi h2 {
     text-align: center;
     font-family: alegreya-sans-medium;
@@ -402,6 +414,10 @@ a:hover {
     counter-reset: #3a4f52;
 }
 
+.testi-head {
+    margin-bottom: 88px;
+}
+
 .testi p {
     text-align: center;
     font-size: 1.4rem;
@@ -409,10 +425,30 @@ a:hover {
 
 .testi-boxes {
     display: flex;
+    justify-content: center;
+    gap: 100px;
 }
 
 .box-testi {
     text-align: center;
+    flex-basis: 17%;
+}
+
+.box-testi img {
+    margin-bottom: 16px;
+}
+.box-testi p:nth-of-type(1) {
+    font-size: 1.4rem;
+    line-height: 20px;
+    margin-bottom: 24px;
+}
+.box-testi p:nth-of-type(2) {
+    font-size: 1.4rem;
+    font-family: helvatica-bold;
+    line-height: 24px;
+}
+.box-testi p:nth-of-type(3) {
+    font-size: 1.4rem;
 }
 /* # Section contact */
 .contact {
@@ -421,5 +457,44 @@ a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 80px 135px;
+}
+
+.input-fields input,
+.input-fields textarea {
+    margin: auto;
+    display: block;
+    width: 40vw;
+    margin-bottom: 20px;
+    height: 34px;
+    background-color: rgba(1, 1, 1, 0);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.input-fields textarea {
+    min-height: 50px;
+    height: 50px;
+    resize: vertical;
+    margin-bottom: 30px;
+}
+.input-fields input::placeholder,
+.input-fields textarea::placeholder {
+    color: rgba(255, 255, 255, 0.614);
+}
+
+.contact-box p {
+    text-align: center;
 }
 /* ! FOOTER */
+footer {
+    background-color: rgb(43, 62, 82);
+    padding: 50px;
+}
+
+footer p {
+    color: white;
+    font-size: 1.4rem;
+}
