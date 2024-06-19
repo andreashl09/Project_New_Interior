@@ -162,7 +162,23 @@ header article p {
     color: white;
 }
 
-/* btn-white */
+/* btn-white Button */
+.btn-white a {
+    border: 1px solid white;
+    font-family: helvatica-light;
+    font-size: 1.8rem;
+    color: white;
+    padding: 12px;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.btn-white a:hover {
+    background-color: white;
+    color: #3a4f52;
+}
+
+/* btn-white-img-box Button */
 .btn-white-img-box a {
     border: 1px solid white;
     font-family: helvatica-light;
@@ -170,6 +186,7 @@ header article p {
     color: white;
     padding: 12px;
     transition: 0.3s;
+    border-radius: 2px;
 }
 
 .btn-white-img-box a:hover {
@@ -184,9 +201,9 @@ header article p {
 }
 
 .btn-white-img-box {
-    margin-left: -50%;
+    margin-left: -15vw;
     z-index: 2;
-    display: block;
+    display: none;
 }
 .img-gallery-grid {
     display: grid;
@@ -234,23 +251,27 @@ header article p {
     align-items: center;
     overflow: hidden;
     max-width: 100%;
+    border: 5px solid white;
 }
 
 .img-box:hover {
+    transition-delay: 50ms;
     background-color: #3a4f52;
-    display: hidden;
 }
 
-.img-gallery-grid img {
-    transform: scale(1.1);
-    transition: 0.5s linear;
+.img-box:hover > img {
+    transform: scale(1.4);
+    opacity: 0.3;
+}
+
+.img-box img {
+    /* transform: scale(1.1); */
+    transition: 0.3s linear;
     z-index: 1;
 }
 
-.img-gallery-grid img:hover {
+.img-box:hover > .btn-white-img-box {
     display: block;
-    transform: scale(1.4);
-    opacity: 0.3;
 }
 
 /* # Section services */
@@ -350,6 +371,9 @@ header article p {
 .read-more a {
     color: #4da7ca;
 }
+.read-more a:hover {
+    text-decoration: underline #4da7ca;
+}
 /* # Section quote */
 
 .quote {
@@ -382,23 +406,8 @@ header article p {
     transition: 0.3s;
 }
 
-.btn-white.btn-white-img-box a {
-    border: 1px solid white;
-    font-family: helvatica-light;
-    font-size: 1.8rem;
-    color: white;
-    padding: 12px;
-    transition: 0.3s;
-}
 
-.btn-white-img-box a:hover {
-    background-color: white;
-    color: #3a4f52;
-}
-a:hover {
-    background-color: white;
-    color: #3a4f52;
-}
+
 /* #Section testi */
 
 .testi {
