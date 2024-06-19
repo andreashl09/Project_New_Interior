@@ -7,7 +7,10 @@
     font-family: "helvatica-light";
     src: url("../fonts/helvetica-neue/HelveticaNeueLight.otf");
 }
- {
+
+@font-face {
+    font-family: "helvatica-italic";
+    src: url("../fonts/helvetica-neue/HelveticaNeueLightItalic.otf");
 }
 @font-face {
     font-family: "alegreya-sc_medium";
@@ -28,6 +31,7 @@
     font-family: "alegreya-sans-medium";
     src: url("../fonts/Alegreya_Sans/AlegreyaSans-Medium.ttf");
 }
+
 /* BASIC STYLING */
 
 * {
@@ -49,7 +53,7 @@ a {
 }
 
 html {
-    font-family: helvatica-regular, Arial, Helvetica, sans-serif;
+    font-family: helvatica-light, Arial, Helvetica, sans-serif;
     font-size: 10px;
     color: #6a6a6a;
 }
@@ -171,7 +175,7 @@ header article p {
 /* # Section works */
 
 .works {
-    padding: 56px 160px;
+    padding: 56px 160px 88px 160px;
 }
 
 .btn-white-img-box {
@@ -246,11 +250,176 @@ header article p {
 
 /* # Section services */
 
-.services {
+.services-background {
     background: url("../img/img_main_service/services.png");
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: sticky;
+    min-height: 500px;
+    padding: 80px 135px;
+}
+.services,
+.quote-box {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 20px 32px 40px 32px;
 }
 
+.services h2 {
+    text-align: center;
+    font-family: alegreya-sans-medium;
+    font-size: 3.6rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.services p {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.service-boxes {
+    display: flex;
+
+    gap: 100px;
+}
+
+.box-service {
+    text-align: center;
+}
+
+.box-service h5 {
+    font-size: 3rem;
+    font-family: alegreya-sans-medium;
+    margin-bottom: 30px;
+}
+
+.box-service p {
+    margin: auto;
+    line-height: 20px;
+}
+
+/* # Section blog */
+
+.blog {
+    padding: 56px 160px 88px 160px;
+}
+
+.blog-boxes {
+    display: flex;
+    gap: 24px;
+}
+
+.box-blog {
+    flex-basis: 80%;
+}
+
+.box-blog img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.box-blog h6 {
+    font-family: alegreya-sans-medium;
+    font-size: 3rem;
+    color: #3a4f52;
+    margin-bottom: 16px;
+}
+
+.blog-date {
+    font-family: helvatica-italic;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+}
+
+.blog-text {
+    line-height: 20px;
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+}
+
+.read-more a {
+    color: #4da7ca;
+}
+/* # Section quote */
+
+.quote {
+    background: url("../img/img_main_qoute/parallax.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 80px 135px;
+    margin-bottom: 60px;
+}
+
+.quote-box p:nth-of-type(1) {
+    font-family: alegreya-sans-medium;
+    font-size: 3.6rem;
+    margin-bottom: 60px;
+}
+
+.quote-box p {
+    text-align: center;
+}
+
+.btn-white a {
+    border: 1px solid white;
+    font-family: helvatica-light;
+    font-size: 1.8rem;
+    color: white;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.btn-white.btn-white-img-box a {
+    border: 1px solid white;
+    font-family: helvatica-light;
+    font-size: 1.8rem;
+    color: white;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.btn-white-img-box a:hover {
+    background-color: white;
+    color: #3a4f52;
+}
+a:hover {
+    background-color: white;
+    color: #3a4f52;
+}
+/* #Section testi */
+
+.testi h2 {
+    text-align: center;
+    font-family: alegreya-sans-medium;
+    font-size: 3.6rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+    counter-reset: #3a4f52;
+}
+
+.testi p {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.testi-boxes {
+    display: flex;
+}
+
+.box-testi {
+    text-align: center;
+}
+/* # Section contact */
+.contact {
+    background: url("../img/img_main_contact/contact.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* ! FOOTER */
