@@ -1,3 +1,33 @@
+@font-face {
+    font-family: "helvatica-regular";
+    src: url("../fonts/helvetica-neue/HelveticaNeueMedium.otf");
+}
+
+@font-face {
+    font-family: "helvatica-light";
+    src: url("../fonts/helvetica-neue/HelveticaNeueLight.otf");
+}
+ {
+}
+@font-face {
+    font-family: "alegreya-sc_medium";
+    src: url("../fonts/Alegreya_SC/AlegreyaSC-Medium.ttf");
+}
+
+@font-face {
+    font-family: "alegreya-sc_regular";
+    src: url("../fonts/Alegreya_SC/AlegreyaSC-Regular.ttf");
+}
+
+@font-face {
+    font-family: "nixie-regular";
+    src: url("../fonts/Nixie_One/NixieOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "alegreya-sans-medium";
+    src: url("../fonts/Alegreya_Sans/AlegreyaSans-Medium.ttf");
+}
 /* BASIC STYLING */
 
 * {
@@ -18,8 +48,209 @@ a {
 .wrapper {
 }
 
+html {
+    font-family: helvatica-regular, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #6a6a6a;
+}
+
 /* ! HEADER */
 
+/* # HEADER */
+header {
+    background-image: url("../img/img_header/img_header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 32px;
+}
+/* # NAV */
+nav {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.burger-wrapper {
+    cursor: pointer;
+}
+
+.burger {
+    background-color: white;
+    width: 30px;
+    height: 4px;
+    margin: 3px;
+    border-radius: 1px;
+}
+
+nav h3 {
+    font-family: alegreya-sc_regular, Arial, Helvetica, sans-serif;
+    font-size: 3.6rem;
+    font-weight: 100;
+}
+
+nav h3:hover {
+    cursor: pointer;
+    text-decoration: 1px underline;
+}
+
+/* # Article */
+
+header article {
+    margin-top: 21%;
+    text-align: center;
+}
+
+header article h1 {
+    font-family: nixie-regular;
+    font-size: 5.6rem;
+    color: white;
+    font-weight: 100;
+}
+
+header article p {
+    font-family: alegreya-sc_regular;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2.2rem;
+}
+
 /* ! MAIN */
+
+/* Klasse die mehrmals verwendet wird in Section works und Section Blog*/
+/* .headline */
+/* .works-blog-headline */
+
+.headline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.works-blog-headline h2 {
+    color: #3a4f52;
+    font-family: alegreya-sans-medium;
+    font-size: 3.6rem;
+    margin-bottom: 16px;
+}
+
+.works-blog-headline p {
+    font-size: 1.4rem;
+}
+
+.view-all-btn a {
+    border: 1px solid #3a4f52;
+    font-family: helvatica-light;
+    font-size: 1.8rem;
+    color: #3a4f52;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.view-all-btn a:hover {
+    background-color: rgb(69, 89, 92);
+    color: white;
+}
+
+/* btn-white */
+.btn-white-img-box a {
+    border: 1px solid white;
+    font-family: helvatica-light;
+    font-size: 1.8rem;
+    color: white;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.btn-white-img-box a:hover {
+    background-color: white;
+    color: #3a4f52;
+}
+
+/* # Section works */
+
+.works {
+    padding: 56px 160px;
+}
+
+.btn-white-img-box {
+    margin-left: -50%;
+    z-index: 2;
+    display: block;
+}
+.img-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "img1 img2 img4"
+        "img4 img5 img6";
+    gap: 30px;
+}
+
+.img1 {
+    grid-area: img1;
+    width: 100%;
+    /* background: url("../img/img_main_works/Link.png"); */
+}
+
+.img2 {
+    grid-area: img2;
+    width: 100%;
+}
+
+.img3 {
+    width: 100%;
+    grid-area: img3;
+}
+
+.img4 {
+    width: 100%;
+    grid-area: img4;
+}
+
+.img5 {
+    width: 100%;
+    grid-area: img5;
+}
+
+.img6 {
+    width: 100%;
+    grid-area: img6;
+}
+
+.img-box {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.img-box:hover {
+    background-color: #3a4f52;
+    display: hidden;
+}
+
+.img-gallery-grid img {
+    transform: scale(1.1);
+    transition: 0.5s linear;
+    z-index: 1;
+}
+
+.img-gallery-grid img:hover {
+    display: block;
+    transform: scale(1.4);
+    opacity: 0.3;
+}
+
+/* # Section services */
+
+.services {
+    background: url("../img/img_main_service/services.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: sticky;
+}
 
 /* ! FOOTER */
