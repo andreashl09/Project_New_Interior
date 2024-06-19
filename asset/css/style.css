@@ -310,7 +310,6 @@ header article p {
 }
 .service-boxes {
     display: flex;
-
     gap: 100px;
 }
 
@@ -398,15 +397,13 @@ header article p {
 }
 
 .btn-white a {
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.7);
     font-family: helvatica-light;
     font-size: 1.8rem;
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
     padding: 12px;
     transition: 0.3s;
 }
-
-
 
 /* #Section testi */
 
@@ -506,4 +503,95 @@ footer {
 footer p {
     color: white;
     font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 768px) {
+    /* # HEADER */
+    header {
+        background-image: url("../img/img_header/header-tablet.png");
+        height: 50vh;
+    }
+
+    header article {
+        margin-top: 13%;
+    }
+
+    /* # Section works */
+    .works {
+        padding: 24px 16px 126px 16px;
+    }
+
+    .img-gallery-grid {
+        gap: 15px;
+    }
+
+    .btn-white-img-box {
+        margin-left: -20vw;
+    }
+    .btn-white-img-box a {
+        font-size: 1.2em;
+    }
+
+    /* # Section services */
+    .services-background {
+        background: url("../img/img_main_service/services-tablet.png");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 74px 8px;
+    }
+
+    .services {
+        padding: 24px 16px;
+    }
+
+    .service-boxes {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* # Section blog */
+
+    .blog {
+        padding: 24px 16px 126px 16px;
+    }
+
+    /* # Section quote */
+
+    .quote {
+        background: url("../img/img_main_qoute/parallax-tablet.png");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 24px 16px 126px 16px;
+    }
+
+    /* # Section testi */
+
+    .testi {
+        padding: 0 40px;
+    }
+    .testi-boxes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    /* # Section contact */
+
+    .contact {
+        background: url("../img/img_main_contact/contact-tablet.png");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 74px 8px;
+    }
+
+    .btn-white a {
+        font-size: 1.4rem;
+    }
 }
