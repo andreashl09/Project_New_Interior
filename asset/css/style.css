@@ -93,13 +93,13 @@ nav {
     border-radius: 1px;
 }
 
-nav h3 {
+.logo {
     font-family: alegreya-sc_regular, Arial, Helvetica, sans-serif;
     font-size: 3.6rem;
     font-weight: 100;
 }
 
-nav h3:hover {
+.logo:hover {
     cursor: pointer;
     text-decoration: 1px underline;
 }
@@ -113,7 +113,8 @@ header article {
 
 header article h1 {
     font-family: nixie-regular;
-    font-size: 5.6rem;
+    /* font-size: 5.6rem; */
+    font-size: clamp(3.6rem, 4.6vw, 5.6rem);
     color: white;
     font-weight: 100;
 }
@@ -593,5 +594,21 @@ footer p {
 
     .btn-white a {
         font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    header {
+        background-image: url("../img/img_header/header-mobil.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* height: 60vh; */
+    }
+
+    .logo {
+    }
+
+    header article h1 {
+        /* font-size: 3.6rem; */
     }
 }
