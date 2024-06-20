@@ -107,14 +107,13 @@ nav {
 /* # Article */
 
 header article {
-    margin-top: 21%;
+    margin-top: 30vh;
     text-align: center;
 }
 
 header article h1 {
     font-family: nixie-regular;
-    /* font-size: 5.6rem; */
-    font-size: clamp(3.6rem, 4.6vw, 5.6rem);
+    font-size: 5.6rem;
     color: white;
     font-weight: 100;
 }
@@ -142,7 +141,7 @@ header article p {
     color: #3a4f52;
     font-family: alegreya-sans-medium;
     font-size: 3.6rem;
-    margin-bottom: 16px;
+    margin-bottom: 3%;
 }
 
 .works-blog-headline p {
@@ -211,7 +210,7 @@ header article p {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-        "img1 img2 img4"
+        "img1 img2 img3"
         "img4 img5 img6";
     gap: 30px;
 }
@@ -252,7 +251,7 @@ header article p {
     align-items: center;
     overflow: hidden;
     max-width: 100%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
 }
 
 .img-box:hover {
@@ -506,6 +505,52 @@ footer p {
     font-size: 1.4rem;
 }
 
+@media only screen and (max-width: 992px) {
+    header {
+        background-position: 40%;
+    }
+
+    .logo {
+        font-size: 3.6rem;
+    }
+
+    /* # Section works */
+
+    .works {
+        padding: 24px 16px 126px 16px;
+    }
+
+    .btn-white-img-box {
+        margin-left: -22vw;
+    }
+
+    /* # Section services */
+    .services-background {
+        padding: 74px 8px;
+    }
+
+    /* # Section blog */
+    .blog {
+        padding: 24px 16px 126px 16px;
+    }
+
+    /* # Section quote */
+
+    .quote {
+        padding: 74px 8px;
+    }
+
+    /* # Section contact */
+    .contact {
+        padding: 74px 8px;
+    }
+
+    .input-fields input,
+    .input-fields textarea {
+        width: 80%;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     /* # HEADER */
     header {
@@ -514,13 +559,10 @@ footer p {
     }
 
     header article {
-        margin-top: 13%;
+        margin-top: 15vh;
     }
 
     /* # Section works */
-    .works {
-        padding: 24px 16px 126px 16px;
-    }
 
     .img-gallery-grid {
         gap: 15px;
@@ -552,12 +594,6 @@ footer p {
         gap: 20px;
     }
 
-    /* # Section blog */
-
-    .blog {
-        padding: 24px 16px 126px 16px;
-    }
-
     /* # Section quote */
 
     .quote {
@@ -566,7 +602,6 @@ footer p {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 24px 16px 126px 16px;
     }
 
     /* # Section testi */
@@ -597,18 +632,88 @@ footer p {
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 390px) {
     header {
         background-image: url("../img/img_header/header-mobil.png");
         background-repeat: no-repeat;
         background-size: cover;
-        /* height: 60vh; */
+        height: 60vh;
     }
 
     .logo {
+        font-size: 2.8rem;
     }
 
     header article h1 {
-        /* font-size: 3.6rem; */
+        font-size: 3rem;
+    }
+
+    header article p {
+        font-size: 1rem;
+        border-color: 1px solid red;
+    }
+
+    .burger {
+        background-color: white;
+        width: 25px;
+        height: 3px;
+        margin: 3px;
+        border-radius: 2px;
+    }
+
+    /* #Section works */
+
+    .img-gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "img1"
+            "img2" "img3"
+            "img4" "img5" "img6";
+        gap: 20px;
+    }
+
+    .btn-white-img-box {
+        margin-left: -60%;
+    }
+
+    .view-all-btn a {
+        font-size: 1.2rem;
+    }
+
+    .works-blog-headline h2 {
+        font-size: 2.8rem;
+    }
+
+    /* # Section service */
+    .services-background {
+        padding: 74px 0;
+    }
+
+    .services,
+    .quote-box,
+    .contact-box {
+        padding: 24px 40px;
+    }
+
+    /* # Section blog */
+
+    .blog-boxes {
+        flex-direction: column;
+    }
+
+    /* # Section quote */
+    .quote {
+        padding: 74px 0;
+    }
+
+    /* # Section contact */
+    .contact {
+        padding: 74px 0;
+    }
+
+    .input-fields input,
+    .input-fields textarea {
+        width: 100%;
     }
 }
