@@ -201,7 +201,7 @@ header article p {
 }
 
 .btn-white-img-box {
-    margin-left: -15vw;
+    margin-left: -16vw;
     z-index: 2;
     display: none;
 }
@@ -478,6 +478,7 @@ header article p {
     border-radius: 4px;
     padding-left: 10px;
     padding-top: 5px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .input-fields textarea {
@@ -674,7 +675,7 @@ footer p {
     }
 
     .btn-white-img-box {
-        margin-left: -60%;
+        margin-left: -62%;
     }
 
     .view-all-btn a {
