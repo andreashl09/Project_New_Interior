@@ -129,6 +129,9 @@ header article p {
 /* Klasse die mehrmals verwendet wird in Section works und Section Blog*/
 /* .headline */
 /* .works-blog-headline */
+/* .services-contact-headline */
+/* .btn-white Button */
+/* .btn-white-img-box Button  */
 
 .headline {
     display: flex;
@@ -162,7 +165,7 @@ header article p {
     color: white;
 }
 
-/* btn-white Button */
+/* * btn-white Button */
 .btn-white a {
     border: 1px solid white;
     font-family: helvatica-light;
@@ -178,7 +181,7 @@ header article p {
     color: #3a4f52;
 }
 
-/* btn-white-img-box Button */
+/* * btn-white-img-box Button */
 .btn-white-img-box a {
     border: 1px solid white;
     font-family: helvatica-light;
@@ -194,17 +197,44 @@ header article p {
     color: #3a4f52;
 }
 
+.services,
+.quote-box,
+.contact-box {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 20px 32px 40px 32px;
+}
+
+.services-contact-headline h2 {
+    text-align: center;
+    font-family: alegreya-sans-medium;
+    font-size: 3.6rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.services-contact-headline p {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: white;
+}
+
 /* # Section works */
 
 .works {
     padding: 56px 160px 88px 160px;
 }
 
+/* -- Positionierung des btn wird mit margin-left durchgeführt */
 .btn-white-img-box {
     margin-left: -16vw;
     z-index: 2;
     display: none;
 }
+
+/* -- img-gallery mit Display: grid für die bessere Positionierung der img  */
 .img-gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -218,7 +248,6 @@ header article p {
 .img1 {
     grid-area: img1;
     width: 100%;
-    /* background: url("../img/img_main_works/Link.png"); */
 }
 
 .img2 {
@@ -251,7 +280,16 @@ header article p {
     align-items: center;
     overflow: hidden;
     max-width: 100%;
-    /* border: 5px solid white; */
+}
+
+
+/* -- Zoom-in Aninmation beim hover */
+/* -- .btn-white-img-box wird bei hover von .img-box eingeblendet */
+/* -- ! WICHTIG: .img-box benötigt einen z-index: 1 und .btn-white-img-box z-index: 2*/
+
+.img-box img {
+    transition: 0.3s linear;
+    z-index: 1;
 }
 
 .img-box:hover {
@@ -262,12 +300,6 @@ header article p {
 .img-box:hover > img {
     transform: scale(1.4);
     opacity: 0.3;
-}
-
-.img-box img {
-    /* transform: scale(1.1); */
-    transition: 0.3s linear;
-    z-index: 1;
 }
 
 .img-box:hover > .btn-white-img-box {
@@ -285,29 +317,7 @@ header article p {
     min-height: 500px;
     padding: 80px 135px;
 }
-.services,
-.quote-box,
-.contact-box {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: white;
-    padding: 20px 32px 40px 32px;
-}
 
-.services-contact-headline h2 {
-    text-align: center;
-    font-family: alegreya-sans-medium;
-    font-size: 3.6rem;
-    font-weight: 100;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.services-contact-headline p {
-    font-size: 1.4rem;
-    text-align: center;
-    margin-bottom: 60px;
-    color: white;
-}
 .service-boxes {
     display: flex;
     gap: 100px;
@@ -443,16 +453,19 @@ header article p {
 .box-testi img {
     margin-bottom: 16px;
 }
+
 .box-testi p:nth-of-type(1) {
     font-size: 1.4rem;
     line-height: 20px;
     margin-bottom: 24px;
 }
+
 .box-testi p:nth-of-type(2) {
     font-size: 1.4rem;
     font-family: helvatica-bold;
     line-height: 24px;
 }
+
 .box-testi p:nth-of-type(3) {
     font-size: 1.4rem;
 }
@@ -506,215 +519,4 @@ footer p {
     font-size: 1.4rem;
 }
 
-@media only screen and (max-width: 992px) {
-    header {
-        background-position: 40%;
-    }
-
-    .logo {
-        font-size: 3.6rem;
-    }
-
-    /* # Section works */
-
-    .works {
-        padding: 24px 16px 126px 16px;
-    }
-
-    .btn-white-img-box {
-        margin-left: -22vw;
-    }
-
-    /* # Section services */
-    .services-background {
-        padding: 74px 8px;
-    }
-
-    /* # Section blog */
-    .blog {
-        padding: 24px 16px 126px 16px;
-    }
-
-    /* # Section quote */
-
-    .quote {
-        padding: 74px 8px;
-    }
-
-    /* # Section contact */
-    .contact {
-        padding: 74px 8px;
-    }
-
-    .input-fields input,
-    .input-fields textarea {
-        width: 80%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    /* # HEADER */
-    header {
-        background-image: url("../img/img_header/header-tablet.png");
-        height: 50vh;
-    }
-
-    header article {
-        margin-top: 15vh;
-    }
-
-    /* # Section works */
-
-    .img-gallery-grid {
-        gap: 15px;
-    }
-
-    .btn-white-img-box {
-        margin-left: -20vw;
-    }
-    .btn-white-img-box a {
-        font-size: 1.2em;
-    }
-
-    /* # Section services */
-    .services-background {
-        background: url("../img/img_main_service/services-tablet.png");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 74px 8px;
-    }
-
-    .services {
-        padding: 24px 16px;
-    }
-
-    .service-boxes {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    /* # Section quote */
-
-    .quote {
-        background: url("../img/img_main_qoute/parallax-tablet.png");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    /* # Section testi */
-
-    .testi {
-        padding: 0 40px;
-    }
-    .testi-boxes {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 100px;
-    }
-
-    /* # Section contact */
-
-    .contact {
-        background: url("../img/img_main_contact/contact-tablet.png");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 74px 8px;
-    }
-
-    .btn-white a {
-        font-size: 1.4rem;
-    }
-}
-
-@media only screen and (max-width: 390px) {
-    header {
-        background-image: url("../img/img_header/header-mobil.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 60vh;
-    }
-
-    .logo {
-        font-size: 2.8rem;
-    }
-
-    header article h1 {
-        font-size: 3rem;
-    }
-
-    header article p {
-        font-size: 1rem;
-        border-color: 1px solid red;
-    }
-
-    .burger {
-        background-color: white;
-        width: 25px;
-        height: 3px;
-        margin: 3px;
-        border-radius: 2px;
-    }
-
-    /* #Section works */
-
-    .img-gallery-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "img1"
-            "img2" "img3"
-            "img4" "img5" "img6";
-        gap: 20px;
-    }
-
-    .btn-white-img-box {
-        margin-left: -62%;
-    }
-
-    .view-all-btn a {
-        font-size: 1.2rem;
-    }
-
-    .works-blog-headline h2 {
-        font-size: 2.8rem;
-    }
-
-    /* # Section service */
-    .services-background {
-        padding: 74px 0;
-    }
-
-    .services,
-    .quote-box,
-    .contact-box {
-        padding: 24px 40px;
-    }
-
-    /* # Section blog */
-
-    .blog-boxes {
-        flex-direction: column;
-    }
-
-    /* # Section quote */
-    .quote {
-        padding: 74px 0;
-    }
-
-    /* # Section contact */
-    .contact {
-        padding: 74px 0;
-    }
-
-    .input-fields input,
-    .input-fields textarea {
-        width: 100%;
-    }
-}
+/* ---- Media-Queries sind in einer eigenen Datei "../asset/css/media_queries.css" ausgelagert */

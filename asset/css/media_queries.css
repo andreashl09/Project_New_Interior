@@ -1,0 +1,213 @@
+
+@media only screen and (max-width: 992px) {
+    header {
+        background-position: 40%;
+    }
+
+    .logo {
+        font-size: 3.6rem;
+    }
+
+    /* # Section works */
+
+    .works {
+        padding: 24px 16px 126px 16px;
+    }
+
+    .btn-white-img-box {
+        margin-left: -22vw;
+    }
+
+    /* # Section services */
+    .services-background {
+        padding: 74px 8px;
+    }
+
+    /* # Section blog */
+    .blog {
+        padding: 24px 16px 126px 16px;
+    }
+
+    /* # Section quote */
+
+    .quote {
+        padding: 74px 8px;
+    }
+
+    /* # Section contact */
+    .contact {
+        padding: 74px 8px;
+    }
+
+    .input-fields input,
+    .input-fields textarea {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* # HEADER */
+    header {
+        background-image: url("../img/img_header/header-tablet.png");
+        height: 50vh;
+    }
+
+    header article {
+        margin-top: 15vh;
+    }
+
+    /* # Section works */
+
+    .img-gallery-grid {
+        gap: 15px;
+    }
+
+    .btn-white-img-box {
+        margin-left: -20vw;
+    }
+    .btn-white-img-box a {
+        font-size: 1.2em;
+    }
+
+    /* # Section services */
+    .services-background {
+        background: url("../img/img_main_service/services-tablet.png");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 74px 8px;
+    }
+
+    .services {
+        padding: 24px 16px;
+    }
+
+    .service-boxes {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* # Section quote */
+
+    .quote {
+        background: url("../img/img_main_qoute/parallax-tablet.png");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* # Section testi */
+
+    .testi {
+        padding: 0 40px;
+    }
+    .testi-boxes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    /* # Section contact */
+
+    .contact {
+        background: url("../img/img_main_contact/contact-tablet.png");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 74px 8px;
+    }
+
+    .btn-white a {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    header {
+        background-image: url("../img/img_header/header-mobil.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+    }
+
+    .logo {
+        font-size: 2.8rem;
+    }
+
+    header article h1 {
+        font-size: 3rem;
+    }
+
+    header article p {
+        font-size: 1rem;
+        border-color: 1px solid red;
+    }
+
+    .burger {
+        background-color: white;
+        width: 25px;
+        height: 3px;
+        margin: 3px;
+        border-radius: 2px;
+    }
+
+    /* #Section works */
+
+    .img-gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "img1"
+            "img2" "img3"
+            "img4" "img5" "img6";
+        gap: 20px;
+    }
+
+    .btn-white-img-box {
+        margin-left: -62%;
+    }
+
+    .view-all-btn a {
+        font-size: 1.2rem;
+    }
+
+    .works-blog-headline h2 {
+        font-size: 2.8rem;
+    }
+
+    /* # Section service */
+    .services-background {
+        padding: 74px 0;
+    }
+
+    .services,
+    .quote-box,
+    .contact-box {
+        padding: 24px 40px;
+    }
+
+    /* # Section blog */
+
+    .blog-boxes {
+        flex-direction: column;
+    }
+
+    /* # Section quote */
+    .quote {
+        padding: 74px 0;
+    }
+
+    /* # Section contact */
+    .contact {
+        padding: 74px 0;
+    }
+
+    .input-fields input,
+    .input-fields textarea {
+        width: 100%;
+    }
+}
